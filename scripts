@@ -1,0 +1,13 @@
+T = posets.TamariLattice(5)
+for c in T.maximal_antichains():
+    if len(c) == 9:
+        for i in c:
+            i = list(i)
+            i.pop()
+            DyckWord(i).pretty_print(type="NE-SE")
+            DyckWord(i).to_noncrossing_partition()
+        print('\n')
+
+for i in range(5,8):
+	T = posets.TamariLattice(i)
+	print(max([len(c) for c in T.maximal_antichains()]))
