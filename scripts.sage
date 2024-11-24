@@ -32,12 +32,12 @@ for c in T.maximal_antichains():
             i.pop()
             t = DyckWord(i).to_binary_tree_tamari()
             ascii_art(t)
-            for p in t.sylvester_class():
-                Permutation(p)
-            print('\n')
+            #for p in t.sylvester_class():
+            #    Permutation(p)
+            #print('\n')
         print('\n\n')
 
 # exceeds computing power
-for i in range(5,8):
+for i in range(6,10):
 	T = posets.TamariLattice(i)
 	print(max([len(c) for c in T.maximal_antichains()]))
